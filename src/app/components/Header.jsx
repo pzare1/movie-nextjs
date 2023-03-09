@@ -14,7 +14,7 @@ function Header() {
             <MenuItems title="About" address="/about" Icon={AiOutlineCompass}/>
         </div>
         <div className='logo mx-2'>
-          <Link href={'/'} className='cursor-pointer'>
+          <Link href={'/'}>
             <Logo/>
           </Link>
         </div>
