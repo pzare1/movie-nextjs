@@ -8,7 +8,7 @@ import {MdGrade} from 'react-icons/md'
 function Card({ result }) {
   return (
     <>
-      <div className=" cursor-pointer sm:p-3 sm:hover:shadow-cyan-900 sm:shadow-md rounded-lg transition-shadow group opacity-80">
+      <div className=" cursor-pointer p-3 sm:p-3 sm:hover:shadow-cyan-900 sm:shadow-md rounded-lg transition-shadow group opacity-80">
         <Link href={`/movie/${result.id}`}>
           <Image
             className="group-hover:opacity-100 transition-opacity duration-300"
@@ -25,8 +25,8 @@ function Card({ result }) {
             }}
           ></Image>
         </Link>
-        <h2 className="truncate my-2 font-bold text-md text-cyan-500">{result.title || result.name}</h2>
-        <p className="line-clamp-2 text-md text-cyan-100">{result.overview}</p>
+        <h1 className="truncate my-2 font-bold text-md text-cyan-500">{result.title || result.name}</h1>
+        <p className="line-clamp-2 text-sm text-white">{result.overview}</p>
         <div className="flex justify-between icons my-3 p-2">
             <div className="vote h-full items-center flex justify-between">
               <AiFillLike className=" text-cyan-500"/>
