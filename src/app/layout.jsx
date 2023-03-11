@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head />
-      <body className='bg-slate-900 h-100'>
+      <body className='bg-body-color h-100'>
         <Header/>
         <Navbar/>
         {children}

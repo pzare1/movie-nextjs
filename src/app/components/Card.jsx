@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {AiFillLike} from 'react-icons/ai'
+import {MdGrade} from 'react-icons/md'
+
 
 function Card({ result }) {
   return (
@@ -22,6 +25,22 @@ function Card({ result }) {
             }}
           ></Image>
         </Link>
+        <h2 className="truncate my-2 font-bold text-md text-cyan-500">{result.title || result.name}</h2>
+        <p className="line-clamp-2 text-md text-cyan-100">{result.overview}</p>
+        <div className="flex justify-between icons my-3 p-2">
+            <div className="vote h-full items-center flex justify-between">
+              <AiFillLike className=" text-cyan-500"/>
+              <span className="ml-2">
+              {result.vote_count}
+              </span>
+            </div>
+            <div className="vote h-full items-center flex justify-between">
+              <MdGrade className=" text-yellow-400"/>
+              <span className="ml-2">
+              {result.vote_average.toFixed(1)}
+              </span>
+            </div>
+        </div>
       </div>
     </>
   );

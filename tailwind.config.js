@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'body-color': '#1F2129',
+        'nav-color': '#232730'
+      }
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }
