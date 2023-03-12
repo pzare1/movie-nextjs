@@ -6,15 +6,20 @@ import {MdGrade} from 'react-icons/md'
 
 
 function Card({ result }) {
+  const imageUrl =
+    result.backdrop_path || result.poster_path
+      ? `https://image.tmdb.org/t/p/original/${
+          result.backdrop_path || result.poster_path
+        }`
+      : "/images/movie.jpg";
+
   return (
     <>
       <div className=" cursor-pointer p-3 sm:p-3 sm:hover:shadow-cyan-900 sm:shadow-md rounded-lg transition-shadow group opacity-80">
         <Link href={`/movie/${result.id}`}>
           <Image
             className="group-hover:opacity-100 transition-opacity duration-300"
-            src={`https://image.tmdb.org/t/p/original/${
-              result.backdrop_path || result.poster_path
-            }`}
+            src={imageUrl}
             width={500}
             height={300}
             placeholder="blur"
